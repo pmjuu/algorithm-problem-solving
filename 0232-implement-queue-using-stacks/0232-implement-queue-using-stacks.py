@@ -7,10 +7,6 @@ class MyQueue:
     def push(self, x: int) -> None:
         self.push_stack.append(x)
         
-        if (len(self.pop_stack) == 0):
-            while (len(self.push_stack)):
-                self.pop_stack.append(self.push_stack.pop())
-
     def pop(self) -> int:
         if (len(self.pop_stack) == 0):
             while (len(self.push_stack)):
